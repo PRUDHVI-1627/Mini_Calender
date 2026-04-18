@@ -1,48 +1,74 @@
-# 📅 Mini Calendar
+# Mini Calendar
 
-A clean, minimal calendar widget that displays the current date, day, month, and year — styled with a modern two-tone card design.
+A clean, minimal date card built with vanilla HTML, CSS, and JavaScript.
+No libraries, no build step — just open `index.html` in a browser.
 
-## Preview
+---
 
-The calendar renders as a card split into two sections:
-- **Left (white):** Large date number and day name
-- **Right (red):** Month and year
+## What it does
 
-## Project Structure
+- Shows today's **date**, **day of the week**, **month**, and **year**
+- Automatically refreshes at midnight so it's always correct
+- Smooth entry animations on load
+- Subtle hover lift effect
+
+---
+
+## Files
 
 ```
-├── index.html      # Main HTML structure
-├── style.css       # Styling and layout
-└── script.js       # JavaScript to populate current date
+mini-calendar/
+├── index.html   — markup & Google Fonts import
+├── style.css    — all styling, animations, and responsive rules
+├── script.js    — date logic + midnight auto-refresh
+└── README.md    — you're reading it
 ```
 
-## Features
+---
 
-- Automatically displays today's date on load
-- Shows full day name (e.g., Sunday), month (e.g., January), and year
-- Zero-padded date (e.g., `01` instead of `1`)
-- Fully static — no dependencies or frameworks required
+## Usage
 
-## Getting Started
+Just double-click `index.html` or serve the folder with any static server:
 
-1. Clone or download the project files.
-2. Open `index.html` in any modern browser.
+```bash
+# Python
+python -m http.server 8080
 
-No build tools or installations needed.
+# Node (npx)
+npx serve .
+```
 
-## How It Works
+Then visit `http://localhost:8080`.
 
-`script.js` uses the built-in JavaScript `Date` object to get the current date and populates the four elements in the HTML:
+---
 
-| Element ID | Value shown          |
-|------------|----------------------|
-| `#date`    | Day of month (01–31) |
-| `#day`     | Day name (Sunday–Saturday) |
-| `#month`   | Month name (January–December) |
-| `#year`    | Full year (e.g., 2026) |
+## Design notes
 
-## Tech Stack
+**Palette**
+| Token | Hex | Role |
+|-------|-----|------|
+| Cream | `#f5f0e8` | Page background |
+| Ink | `#1a1614` | Card background |
+| Terracotta | `#c0533a` | Accent — month label, divider, dot |
+| Sand | `#e8dfd0` | Day name |
+| Muted | `#8a7f75` | Labels, tagline |
 
-- HTML5
-- CSS3 (Flexbox, linear-gradient)
-- Vanilla JavaScript
+**Fonts** — loaded from Google Fonts (requires internet on first open):
+- *Playfair Display* — date number & day name (serif, editorial)
+- *DM Sans* — labels & month (clean, lightweight)
+
+**Animations** — pure CSS `@keyframes`, no JavaScript animation libraries.
+Each element staggers in independently so the card feels assembled rather than just "popping in."
+
+---
+
+## Browser support
+
+Works in all modern browsers (Chrome, Firefox, Safari, Edge).
+No polyfills needed.
+
+---
+
+## License
+
+Do whatever you like with it.
