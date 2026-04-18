@@ -3,22 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Calender</title>
+    <title>Today</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="hero">
-        <div class="calender">
-            <div class="left">
-                <p id="date">01</p>
-                <p id="day">Sunday</p>
+
+    <div class="noise"></div>
+
+    <main class="stage">
+
+        <div class="card" id="card">
+
+            <div class="card__top">
+                <span class="label">Today</span>
+                <span class="label" id="label-year">—</span>
             </div>
-            <div class="right">
-                <p id="month">January</p>
-                <p id="year">2020</p>
+
+            <div class="card__body">
+                <div class="date-block">
+                    <p class="date-num" id="date">—</p>
+                </div>
+
+                <div class="meta-block">
+                    <p class="meta-day"   id="day">—</p>
+                    <div class="divider"></div>
+                    <p class="meta-month" id="month">—</p>
+                </div>
             </div>
+
+            <div class="card__bottom">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+
         </div>
-    </div>
+
+        <p class="tagline">A beautiful day to make something.</p>
+
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>
