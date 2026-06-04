@@ -3,6 +3,8 @@
 A clean, minimal date card built with vanilla HTML, CSS, and JavaScript.
 No libraries, no build step — just open `index.html` in a browser.
 
+<img width="1437" height="711" alt="Mini Calendar Preview" src="https://github.com/user-attachments/assets/d34e6f8d-988c-4855-afd5-fb19f05bb182" />
+
 ---
 
 ## What it does
